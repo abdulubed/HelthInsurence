@@ -11,7 +11,12 @@
 
 <script type="text/javascript" src="/js/jquery.validate.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Book Store</title>
+<title>User Registration</title>
+<style>
+.error {
+ color: #ff0000;
+}
+</style>
 </head>
 <body>
 ${msg}
@@ -22,7 +27,8 @@ ${msg}
 			<tr>
 				<td>FirstName :</td>
 				<td><form:input path="fName" /></td>
-			</tr>
+			
+			<td><form:errors path="fName" cssClass="error"></form:errors></td></tr>
 			<tr>
 				<td>LastName:</td>
 				<td><form:input path="lName" /></td>
