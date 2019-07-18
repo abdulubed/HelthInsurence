@@ -1,0 +1,54 @@
+##server config 
+server:
+  port: 5050
+  
+##Custom messeges
+ssa: 
+  enrollsuccess: ssn no created successfully 
+  enrollfailure: ssn no created failure 
+  msg: msg
+  formAtr: formAtr
+  jsp: 
+    formlaunch: ssnFormlaunch
+    viewrecords: view_ssn_records
+    update: update
+  
+  update: 
+    success: updated successfully
+    fail: updation failed
+  
+  exception:
+    excepMsg: invalid Ssnno 
+    ssaweebexcep: Server is Down , please try after some Time
+    ssarestexcep: Invalid SsnNo , please enter valid ssnno   
+
+  
+ #view resolver
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+##oracle DB Config properties
+  datasource:
+    #type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager
+   
+#hibernate properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        show_sql: true
+        format_sql: true
+  
+##logger config
+logging:
+  level:
+    root: INFRO
+    file: /C://logging//applicationlogger1.log

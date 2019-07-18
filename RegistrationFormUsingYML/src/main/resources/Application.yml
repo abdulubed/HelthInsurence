@@ -1,0 +1,13 @@
+server:
+  port: 7777
+  
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+      
+app:
+  properties:
+    regSuccess: your registration successful
+    regFailure: your registration failed

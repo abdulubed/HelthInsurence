@@ -1,0 +1,21 @@
+# local host server port number
+server:
+  port: 9999
+  
+# oracle databse configuration
+spring:
+  datasource:
+    hikari:
+     # jdbc-url: jdbc:oracle:thin:@localhost:1521:xe
+      username: system
+      password: manager
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+
+# view resolver configuration
+
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+      

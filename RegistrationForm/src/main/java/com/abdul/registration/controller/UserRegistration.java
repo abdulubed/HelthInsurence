@@ -38,6 +38,7 @@ public class UserRegistration {
 	public String registationCompleted(@ModelAttribute("user") Registration user, Model model) {
 		model.addAttribute("msg", "Registration Successful");
 		initializationValues(model);
+		System.out.println(model);
 		return "userRegForm";
 	}
 	
